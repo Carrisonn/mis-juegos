@@ -1,0 +1,25 @@
+{
+  "name": "juegos-app",
+  "version": "1.0.0",
+  "description": "Mi App de Juegos",
+  "license": "ISC",
+  "author": "carrison",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "lint": "standard --fix"
+  },
+  "dependencies": {
+    "dotenv": "17.2.2",
+    "express": "5.1.0",
+    "mysql2": "3.14.5",
+    "sequelize": "6.37.7"
+  },
+  "devDependencies": {
+    "standard": "17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}

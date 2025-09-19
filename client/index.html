@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta name="description" content="Mi App de Juegos">
+  <link rel="icon" href="./icons/web-icon.svg" type="image/svg+xml">
+  <title>App de Juegos - Carrison</title>
+  <link rel="preload" href="./css/modern-normalize.css" as="style">
+  <link rel="stylesheet" href="./css/modern-normalize.css">
+  <link rel="preload" href="./css/styles.css" as="style">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/index.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>Mis <span class="primary-color">Juegos</span></h1>
+
+    <section class="container">
+      <div class="container-content">
+        <h2>Buscar <span class="primary-color">Juegos</span></h2>
+        <form method="get" id="search-game">
+          <div class="inputs-container">
+            <input id="search-input" form="search-game" type="text" name="game" placeholder="Ej: Dark Souls"
+              autocomplete="off" required>
+          </div>
+          <div class="container-buttons">
+            <a href="index.html" class="btn">Mostrar Todos</a>
+            <button type="submit" class="btn">Buscar Juego</button>
+          </div>
+        </form>
+
+        <hr>
+
+        <h2>Agregar <span class="primary-color">Juego</span></h2>
+        <form method="post" id="create-game">
+          <div class="inputs-container">
+            <input id="create-input" type="text" name="game" placeholder="Ej: Nier Automata" autocomplete="off"
+              required>
+            <select id="create-select" name="state" form="create-game" required>
+              <option value="" selected hidden>¿Lo has terminado?</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="container-buttons">
+            <a href="index.html" class="btn">Resetear</a>
+            <button type="submit" class="btn">Agregar Juego</button>
+          </div>
+        </form>
+      </div> <!-- .container-content -->
+
+      <div class="container-content" id="container-content">
+        <h2>Lista de <span class="primary-color">Juegos</span></h2>
+        <div class="game-info">
+          <h3>Nombre</h3>
+          <h3>Terminado</h3>
+        </div>
+
+        <div id="game-results"></div>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
